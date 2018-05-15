@@ -11,5 +11,5 @@ WPF application that allows stock management of an electronics store
 ![Scalding Logo](https://github.com/milano95a/computerstore/blob/master/snapshots/4.PNG)
 ## Add Product
 ![Scalding Logo](https://github.com/milano95a/computerstore/blob/master/snapshots/5.PNG)
-## Add Order
+## Report
 ![Scalding Logo](https://github.com/milano95a/computerstore/blob/master/snapshots/6.PNG)
