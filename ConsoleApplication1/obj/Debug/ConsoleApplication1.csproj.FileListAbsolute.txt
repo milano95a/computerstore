@@ -1,0 +1,5 @@
+C:\Users\AB\Documents\Visual Studio 2015\Projects\Library_00003741\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\AB\Documents\Visual Studio 2015\Projects\Library_00003741\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\AB\Documents\Visual Studio 2015\Projects\Library_00003741\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\AB\Documents\Visual Studio 2015\Projects\Library_00003741\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\AB\Documents\Visual Studio 2015\Projects\Library_00003741\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

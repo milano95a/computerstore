@@ -1,0 +1,144 @@
+﻿<Window x:Class="Application_00003741.AllOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Application_00003741"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"        
+        Title="AllOrderWindow" Height="768" Width="1024">
+
+    <Window.Resources>
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="#333"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+            <Setter Property="BorderBrush" Value="#333"/>
+            <Setter Property="Margin" Value="0,10,10,0"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+
+        <Style x:Key="buttonClickedStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#333"/>
+            <Setter Property="Margin" Value="0,10,10,0"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+            <Setter Property="BorderBrush" Value="#333"/>
+        </Style>
+
+        <Style x:Key="textBoxStyle" TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="#ddd"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Foreground" Value="#aaa"/>
+        </Style>
+
+        <Style x:Key="textBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Background" Value="#eee"/>
+            <Setter Property="Foreground" Value="#aaa"/>
+        </Style>
+
+        <Style x:Key="datePickerStyle" TargetType="DatePicker">
+            <Setter Property="BorderBrush" Value="#ddd"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+        </Style>
+
+        <Style x:Key="comboBoxStyle" TargetType="ComboBox">
+            <Setter Property="BorderBrush" Value="#ddd"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Foreground" Value="#333"/>
+        </Style>
+    </Window.Resources>
+
+    <DockPanel >
+        <Grid DockPanel.Dock="Top" Height="50" Background="#333333">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="135*"/>
+                <ColumnDefinition Width="374*"/>
+            </Grid.ColumnDefinitions>
+            <Button   
+                    Click="Back"
+                    HorizontalAlignment="Left"
+                    Background="#00000000" 
+                    Padding="0,0,0,0"
+                    BorderThickness="2"
+                    BorderBrush="White"
+                    Margin="5,5,0,5">
+                <Image Source="Resources/back.png" />
+            </Button>
+        </Grid>
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Vertical">
+
+            <Grid Name="All" Margin="20">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Margin="0" Orientation="Horizontal">
+                        <Button Content="Orders"                                
+                                Width="80"
+                                Height="30"
+                                Style="{StaticResource buttonClickedStyle}">
+                        </Button>
+                    </StackPanel>
+
+                    <Border BorderBrush="#333" BorderThickness="1" Padding="20">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Vertical" Width="200">
+                                <GroupBox Margin="0,0,10,10" Header="Filter" Padding="10">
+                                    <StackPanel Orientation="Vertical">
+                                        <RadioButton Name="radiobtnAll" FontSize="15" Margin="0,5,0,5" Checked="AllOrders" Content="All"/>
+                                        <RadioButton FontSize="15" Margin="0,5,0,5" Checked="Open" Content="Open"/>
+                                        <RadioButton FontSize="15" Margin="0,5,0,5" Checked="Processed" Content="Processed"/>
+                                        <RadioButton FontSize="15" Margin="0,5,0,5" Checked="Cancelled" Content="Cancelled"/>
+                                        <RadioButton FontSize="15" Margin="0,20,0,5" Checked="Newest" Content="Newest"/>
+                                        <RadioButton FontSize="15" Margin="0,5,0,5" Checked="Oldest" Content="Oldest"/>
+                                    </StackPanel>
+                                </GroupBox>
+
+                                <Button                                    
+                    				Content="Edit"                                     
+                    				Padding="5"
+                    				Margin="0,0,0,0"
+                    				Click="Edit"                                    
+                    				Style="{StaticResource buttonStyle}"/>
+                                <Button                                    
+                    				Content="Delete"                                     
+                    				Padding="5"
+                    				Margin="0,10,0,0"
+                    				Click="Delete"                                    
+                    				Style="{StaticResource buttonStyle}"/>
+                            </StackPanel>
+
+                            <ScrollViewer Padding="0,0,0,0" Height="300" >
+                                <DataGrid 
+                                    
+                                    Name="dataGridOrderAll" 
+                                    SelectionMode="Single"
+                                    ScrollViewer.CanContentScroll="True"
+                                    IsReadOnly="True" 
+                                    CanUserSortColumns="False" 
+                                    ItemsSource="{Binding}" 
+                                    HorizontalGridLinesBrush="#FFCCCCCC" 
+                                    VerticalGridLinesBrush="#FFCCCCCC"
+                                    BorderThickness="0.5" 
+                                    FontSize="13"
+                                    HorizontalAlignment="Stretch" BorderBrush="White">
+                                </DataGrid>
+
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </DockPanel>
+</Window>

@@ -1,0 +1,6 @@
+C:\Users\AB\documents\visual studio 2015\Projects\Library_00003741\Tester\bin\Debug\Tester.exe.config
+C:\Users\AB\documents\visual studio 2015\Projects\Library_00003741\Tester\bin\Debug\Tester.exe
+C:\Users\AB\documents\visual studio 2015\Projects\Library_00003741\Tester\bin\Debug\Tester.pdb
+C:\Users\AB\documents\visual studio 2015\Projects\Library_00003741\Tester\obj\Debug\Tester.exe
+C:\Users\AB\documents\visual studio 2015\Projects\Library_00003741\Tester\obj\Debug\Tester.pdb
+C:\Users\AB\Documents\Visual Studio 2015\Projects\Library_00003741\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
